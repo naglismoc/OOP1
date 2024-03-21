@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -53,7 +54,39 @@ public class Main {
         System.out.println(studentas);
         System.out.println(studentas.toString());
 
+        Student[] students = {studentas,st2};
         System.out.println(st2);
+
+        for (int i = 0; i < students.length; i++) {
+            System.out.println(students[i]);
+        }
+
+        for (int i = 0; i < students.length; i++) {
+            Student student = students[i];
+            System.out.println(student);
+        }
+
+        for (Student varliukas : students) {
+            System.out.println(varliukas);
+        }
+
+        ArrayList<String> vardai = new ArrayList<>();
+        vardai.add("Petras");
+        vardai.add("Jonas");
+        vardai.add("jokubas");
+        System.out.println(vardai.get(0));
+        System.out.println(vardai.get(1));
+        System.out.println(vardai.get(2));
+        System.out.println(vardai.size());
+        vardai.set(2, "Jokūbas");
+        vardai.remove(1);
+        vardai.contains("Jonas");
+       // vardai.clear();
+
+        for (String vardas : vardai) {
+            System.out.println(vardas);
+        }
+
         /*
         paveldimumas
         konstruktoriai
