@@ -30,20 +30,22 @@ public class Main {
 
         Student studentas = new Student();
 
-        studentas.name = "Naglis";
+      //  studentas.name = "Naglis";
+        studentas.setName("Naglis");
         studentas.surname = "Mockevicius";
         studentas.birthYear = 1990;
         studentas.gender = true;
-        studentas.grades = new int[]{5,8,6,4,7};
+      //  studentas.grades = new int[]{5,8,6,4,7};
         studentas.studentInfo();
-
+        System.out.println(studentas.name);
+        System.out.println(studentas.getName());
 
         Contact ct = new Contact();
         ct.address = "Zukausko 47-6";
         ct.email = "kamtasreikalingas@gmail.com";
         ct.phoNo = "+37063589758";
 
-        studentas.contacts = ct;
+      //  studentas.contacts = ct;
 
         Student st2 = new Student();
         st2.name = "Aivaras";
@@ -69,8 +71,9 @@ public class Main {
         for (Student varliukas : students) {
             System.out.println(varliukas);
         }
-
-        ArrayList<String> vardai = new ArrayList<>();
+        String[] vardai1 = new String[5];// arrays
+        ArrayList<String> vardai = new ArrayList<>();//lists
+        vardai1[0] = "Petras";
         vardai.add("Petras");
         vardai.add("Jonas");
         vardai.add("jokubas");
@@ -87,13 +90,14 @@ public class Main {
             System.out.println(vardas);
         }
 
+        Student studentasPilnas = new Student("Vilhelmas","Petraitis",1941,true);
+        System.out.println(studentasPilnas);
         /*
+        konstruktoriai+
+        overloadinimas+
+        inkapsuliacija+
         paveldimumas
-        konstruktoriai
-        inkapsuliacija
-        overloadinimas
         overridinimas
          */
     }
-
 }
