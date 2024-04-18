@@ -32,12 +32,12 @@ public class Main {
 
       //  studentas.name = "Naglis";
         studentas.setName("Naglis");
-        studentas.surname = "Mockevicius";
-        studentas.birthYear = 1990;
-        studentas.gender = true;
+//        studentas.surname = "Mockevicius";
+//        studentas.birthYear = 1990;
+//        studentas.gender = true;
       //  studentas.grades = new int[]{5,8,6,4,7};
         studentas.studentInfo();
-        System.out.println(studentas.name);
+//        System.out.println(studentas.name);
         System.out.println(studentas.getName());
 
         Contact ct = new Contact();
@@ -48,9 +48,9 @@ public class Main {
       //  studentas.contacts = ct;
 
         Student st2 = new Student();
-        st2.name = "Aivaras";
-        st2.surname = "Aitvaras";
-        st2.birthYear = 1995;
+//        st2.name = "Aivaras";
+//        st2.surname = "Aitvaras";
+//        st2.birthYear = 1995;
         st2.studentInfo();
 
         System.out.println(studentas);
@@ -92,12 +92,29 @@ public class Main {
 
         Student studentasPilnas = new Student("Vilhelmas","Petraitis",1941,true);
         System.out.println(studentasPilnas);
+        studentasPilnas.setCitizenship("Lietuvis");
+        studentasPilnas.breathIn();
+        studentasPilnas.repoduce();
+        System.out.println(studentasPilnas.eat());
+        Student.classInfo();
+
         /*
         konstruktoriai+
         overloadinimas+
         inkapsuliacija+
-        paveldimumas
-        overridinimas
+        paveldimumas+
+        overridinimas+
          */
+
+        System.out.println( assertEquals( formatName("NAGLIS"),"Naglis"));
+        System.out.println( assertEquals( formatName("naglis"),"Naglis"));
+        System.out.println( assertEquals( formatName("nAGLIS"),"Naglis"));
+    }
+    public static String formatName(String name){
+     return name;//suformatuotas Namecase
+    }//naglis -> Naglis; nAGLIS -> Naglis;...
+
+    public static boolean assertEquals(String actual, String expected){
+        return actual.equals(expected);
     }
 }

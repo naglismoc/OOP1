@@ -1,6 +1,8 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
 
-public class Student extends Object{
+public class Student extends Hooman implements IAnimal {
     private String name;
     private String surname;
     private int birthYear;
@@ -9,7 +11,9 @@ public class Student extends Object{
 
   //  public Contact contacts;
 
-
+public static void classInfo(){
+    System.out.println("sita klase yra skirta kurti studentu objektams");
+}
     public void setName(String name) {
         this.name = name;
     }
@@ -43,6 +47,21 @@ public class Student extends Object{
           //     Arrays.toString(this.grades) + " " +
            //    this.contacts
             ;
+    }
+
+    @Override
+    public void breathIn() {
+        System.out.println("ikvepiau");
+    }
+
+    @Override
+    public void repoduce() {
+        System.out.println("5 min yra ilgai");
+    }
+
+    @Override
+    public String eat() {
+        return "~~~~";
     }
 
 }
